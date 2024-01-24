@@ -7,9 +7,12 @@ const ListTodo = () => {
   //delete todo function
   const deleteTodo = async (id) => {
     try {
-      const deleteTodo = await fetch(`https://pern-crud-0thv.onrender.com/todos/${id}`, {
-        method: "DELETE",
-      });
+      const deleteTodo = await fetch(
+        `https://pern-crud-0thv.onrender.com/todos/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
       console.log(deleteTodo);
       setTodos(todos.filter((todo) => todo.todo_id !== id));
     } catch (error) {
