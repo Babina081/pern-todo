@@ -8,7 +8,7 @@ const InputTodo = () => {
 
     try {
       const body = { description };
-      const response = await fetch("https://pern-crud-0thv.onrender.com/todos", {
+      const response = await fetch("http://localhost:5000/todos", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
